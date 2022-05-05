@@ -55,3 +55,39 @@ h1 {
 .slide {
   scroll-snap-align: start;
 }
+
+.buttons {
+  display: flex;
+}
+
+.button {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button > span {
+  display: block;
+  width: 8px;
+  height: 8px;
+  border: solid 2px #2D9CDB;
+  background-color: #2D9CDB;
+  border-radius: 50%;
+}
+
+.button:hover > span {
+  border: solid 2px #FFF;
+  background-color: #FFF;
+}
+
+.button:active > span {
+  border: solid 2px #2D9CDB;
+  background-color: transparent;
+}
+
+.button:focus > span {
+  border: solid 2px #2D9CDB;
+  background-color: transparent;
+}
