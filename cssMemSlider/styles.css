@@ -30,6 +30,7 @@ body {
 }
 
 h1 {
+  margin-top: 24px;
   font-weight: 700;
   font-size: 40px;
   line-height: 46px;
@@ -42,27 +43,40 @@ h1 {
   width: 500px;
   margin: 24px auto;
   overflow: hidden;
+  position: relative;
 } 
+
+input {
+  display: none;
+}
 
 .slider {
   display: flex;
   gap: 20px;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
+  transition: .5s;
 }
 
 .slide {
   scroll-snap-align: start;
 }
 
+figcaption {
+  width: 300px;
+  margin-top: 10px;
+}
+
 .buttons {
   display: flex;
+  position: absolute;
+  top: 610px;
+  right: 0;
+  z-index: 1;
+  background-color: #212121;
 }
 
 .button {
-  width: 20px;
-  height: 20px;
+  width: 22px;
+  height: 52px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -75,6 +89,77 @@ h1 {
   border: solid 2px #2D9CDB;
   background-color: #2D9CDB;
   border-radius: 50%;
+  transition: .2s;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+#slide1:checked ~ .slider {
+  transform: translateX(0);
+}
+
+#slide2:checked ~ .slider {
+  transform: translateX(-520px);
+}
+
+#slide3:checked ~ .slider {
+  transform: translateX(-1040px);
+}
+
+#slide4:checked ~ .slider {
+  transform: translateX(-1560px);
+}
+
+#slide5:checked ~ .slider {
+  transform: translateX(-2080px);
+}
+
+#slide6:checked ~ .slider {
+  transform: translateX(-2600px);
+}
+
+#slide7:checked ~ .slider {
+  transform: translateX(-3120px);
+}
+
+#slide8:checked ~ .slider {
+  transform: translateX(-3640px);
+}
+
+#slide1:checked ~ .buttons > #slide1 > span,
+#slide2:checked ~ .buttons > #slide2 > span,
+#slide3:checked ~ .buttons > #slide3 > span,
+#slide4:checked ~ .buttons > #slide4 > span, 
+#slide5:checked ~ .buttons > #slide5 > span, 
+#slide6:checked ~ .buttons > #slide6 > span, 
+#slide7:checked ~ .buttons > #slide7 > span,
+#slide8:checked ~ .buttons > #slide8 > span {
+  border: solid 2px #2D9CDB;
+  background-color: transparent;
+}
+
+#slide1:checked ~ .buttons > #slide1:hover > span,
+#slide2:checked ~ .buttons > #slide2:hover > span,
+#slide3:checked ~ .buttons > #slide3:hover > span,
+#slide4:checked ~ .buttons > #slide4:hover > span, 
+#slide5:checked ~ .buttons > #slide5:hover > span, 
+#slide6:checked ~ .buttons > #slide6:hover > span, 
+#slide7:checked ~ .buttons > #slide7:hover > span,
+#slide8:checked ~ .buttons > #slide8:hover > span {
+  border: solid 2px #FFF;
+}
+
+#slide1:checked ~ .buttons > #slide1:active > span,
+#slide2:checked ~ .buttons > #slide2:active > span,
+#slide3:checked ~ .buttons > #slide3:active > span,
+#slide4:checked ~ .buttons > #slide4:active > span, 
+#slide5:checked ~ .buttons > #slide5:active > span, 
+#slide6:checked ~ .buttons > #slide6:active > span, 
+#slide7:checked ~ .buttons > #slide7:active > span,
+#slide8:checked ~ .buttons > #slide8:active > span {
+  border: solid 2px #CCC;
 }
 
 .button:hover > span {
@@ -83,11 +168,6 @@ h1 {
 }
 
 .button:active > span {
-  border: solid 2px #2D9CDB;
-  background-color: transparent;
-}
-
-.button:focus > span {
-  border: solid 2px #2D9CDB;
-  background-color: transparent;
+  border: solid 2px #CCC;
+  background-color: #CCC;
 }
