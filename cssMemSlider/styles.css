@@ -39,7 +39,7 @@ h1 {
 
 .container {
   width: 90%;
-  max-width: 500px;
+  max-width: 60vh;
   margin: 1.3rem auto;
   overflow: hidden;
   position: relative;
@@ -187,7 +187,7 @@ input {
 #slide6:checked ~ .text-buttons > .buttons > #btn6:active > span, 
 #slide7:checked ~ .text-buttons > .buttons > #btn7:active > span,
 #slide8:checked ~ .text-buttons > .buttons > #btn8:active > span {
-  border: solid 2px #CCC;
+  border: solid 2px #AAA;
 }
 
 .button:hover > span {
@@ -196,8 +196,8 @@ input {
 }
 
 .button:active > span {
-  border: solid 2px #CCC;
-  background-color: #CCC;
+  border: solid 2px #AAA;
+  background-color: #AAA;
 }
 
 .footer {
