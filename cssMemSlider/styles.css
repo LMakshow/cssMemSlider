@@ -23,7 +23,7 @@ html {
   background: #212121;
   font-family: 'Helvetica', 'Arial', sans-serif;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 125%;
   line-height: 130%;
   font-style: normal;
   color: #FFF;
@@ -78,7 +78,7 @@ input {
 }
 
 .figcaption {
-  height: 0px;
+  height: 0;
   opacity: 0;
   transition: opacity 1s;
   visibility: hidden;
@@ -114,7 +114,7 @@ input {
   display: block;
   width: 0.4rem;
   height: 0.4rem;
-  border: solid 2px #2D9CDB;
+  border: solid 0.1rem #2D9CDB;
   background-color: #2D9CDB;
   border-radius: 50%;
   transition: .2s;
@@ -164,7 +164,7 @@ input {
 #slide6:checked ~ .text-buttons > .buttons > #btn6 > span, 
 #slide7:checked ~ .text-buttons > .buttons > #btn7 > span,
 #slide8:checked ~ .text-buttons > .buttons > #btn8 > span {
-  border: solid 2px #2D9CDB;
+  border: solid 0.1rem #2D9CDB;
   background-color: transparent;
 }
 
@@ -176,7 +176,7 @@ input {
 #slide6:checked ~ .text-buttons > .buttons > #btn6:hover > span, 
 #slide7:checked ~ .text-buttons > .buttons > #btn7:hover > span,
 #slide8:checked ~ .text-buttons > .buttons > #btn8:hover > span {
-  border: solid 2px #FFF;
+  border: solid 0.1rem #FFF;
 }
 
 #slide1:checked ~ .text-buttons > .buttons > #btn1:active > span,
@@ -187,22 +187,22 @@ input {
 #slide6:checked ~ .text-buttons > .buttons > #btn6:active > span, 
 #slide7:checked ~ .text-buttons > .buttons > #btn7:active > span,
 #slide8:checked ~ .text-buttons > .buttons > #btn8:active > span {
-  border: solid 2px #AAA;
+  border: solid 0.1rem #AAA;
 }
 
 .button:hover > span {
-  border: solid 2px #FFF;
+  border: solid 0.1rem #FFF;
   background-color: #FFF;
 }
 
 .button:active > span {
-  border: solid 2px #AAA;
+  border: solid 0.1rem #AAA;
   background-color: #AAA;
 }
 
 .footer {
-  margin: 24px auto 0;
-  font-size: 14px;
+  margin: 2rem auto 0;
+  font-size: 0.7rem;
   line-height: 130%;
   text-align: center;
   color: #555;
