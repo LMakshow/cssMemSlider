@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>CSS Meme Slider</title>
+
+  <meta name="description" content="CSS memes unleashed! Watch some funny things and smile with this simple slider built with HTML and CSS only.">
+  <meta name="author" content="Maksym Lytvyn">
+
+  <meta property="og:title" content="CSS Meme Slider">
+  <meta property="og:type" content="website">
+  <meta property="og:description" content="CSS memes unleashed! Watch some funny things and smile with this simple slider built with HTML and CSS only.">
+
+  <link rel="apple-touch-icon" sizes="192x192" href="src/img/favicon/apple-icon.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="src/img/favicon/favicon-92x92.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="src/img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="src/img/favicon/favicon-16x16.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header"><h1 class="header__text">CSS Meme Slider</h1></header>
+  <main class="container">
+    <input type="radio" name="slide" id="slide1" checked>
+    <input type="radio" name="slide" id="slide2">
+    <input type="radio" name="slide" id="slide3">
+    <input type="radio" name="slide" id="slide4">
+    <input type="radio" name="slide" id="slide5">
+    <input type="radio" name="slide" id="slide6">
+    <input type="radio" name="slide" id="slide7">
+    <input type="radio" name="slide" id="slide8">
+    <div class="slider">
+      <figure class="slide" id="img1"><img src="./src/img/memes/meme1.jpg"></figure>
+      <figure class="slide" id="img2"><img src="./src/img/memes/meme2.jpg"></figure>
+      <figure class="slide" id="img3"><img src="./src/img/memes/meme3.jpg"></figure>
+      <figure class="slide" id="img4"><img src="./src/img/memes/meme4.jpg"></figure>
+      <figure class="slide" id="img5"><img src="./src/img/memes/meme5.jpg"></figure>
+      <figure class="slide" id="img6"><img src="./src/img/memes/meme6.jpg"></figure>
+      <figure class="slide" id="img7"><img src="./src/img/memes/meme7.jpg"></figure>
+      <figure class="slide" id="img8"><img src="./src/img/memes/meme8.jpg"></figure>
+    </div>
+    <div class="text-buttons">
+      <div class="caption">
+        <div class="figcaption" id="txt1">When you try CSS for the first time</div>
+        <div class="figcaption" id="txt2">One ruler to rule them all!</div>
+        <div class="figcaption" id="txt3">CSS won’t protect you from COVID-19</div>
+        <div class="figcaption" id="txt4">I like when my code goes brrrr...</div>
+        <div class="figcaption" id="txt5">Hiding an element in CSS</div>
+        <div class="figcaption" id="txt6">box { width: 75%; overflow: visible; }</div>
+        <div class="figcaption" id="txt7">cat { width: 100%; height: 100%; }</div>
+        <div class="figcaption" id="txt8">You know z-index can’t be more than 2147483646, right?</div>
+      </div>
+      <div class="buttons">
+        <label for="slide1" id="btn1" class="button"><span> </span></label>
+        <label for="slide2" id="btn2" class="button"><span> </span></label>
+        <label for="slide3" id="btn3" class="button"><span> </span></label>
+        <label for="slide4" id="btn4" class="button"><span> </span></label>
+        <label for="slide5" id="btn5" class="button"><span> </span></label>
+        <label for="slide6" id="btn6" class="button"><span> </span></label>
+        <label for="slide7" id="btn7" class="button"><span> </span></label>
+        <label for="slide8" id="btn8" class="button"><span> </span></label>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">Maksym Lytvyn © 2022</footer>
+</body>
+</html>

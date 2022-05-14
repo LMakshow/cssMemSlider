@@ -1,0 +1,236 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+html {
+  background: #212121;
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  font-weight: 400;
+  font-size: 125%;
+  line-height: 130%;
+  font-style: normal;
+  color: #FFF;
+}
+
+h1 {
+  margin-top: 1rem;
+  font-weight: 700;
+  font-size: 2rem;
+  text-align: center;
+  color: #FFF;
+}
+
+.container {
+  width: 90%;
+  max-width: 60vh;
+  margin: 1.3rem auto;
+  overflow: hidden;
+  position: relative;
+} 
+
+input {
+  display: none;
+}
+
+.slider {
+  display: flex;
+  width: calc(800% + 7rem);
+  gap: 1rem;
+  transition: .5s;
+}
+
+.slide {
+  width: calc((100% - 7rem) / 8);
+  scroll-snap-align: start;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+}
+
+.text-buttons {
+  margin-top: 0.2rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 5%;
+}
+
+.caption {
+  margin-top: 0.5rem;
+}
+
+.figcaption {
+  height: 0;
+  opacity: 0;
+  transition: opacity 1s;
+  visibility: hidden;
+}
+
+#slide1:checked ~ .text-buttons > .caption > #txt1,
+#slide2:checked ~ .text-buttons > .caption > #txt2,
+#slide3:checked ~ .text-buttons > .caption > #txt3,
+#slide4:checked ~ .text-buttons > .caption > #txt4, 
+#slide5:checked ~ .text-buttons > .caption > #txt5, 
+#slide6:checked ~ .text-buttons > .caption > #txt6, 
+#slide7:checked ~ .text-buttons > .caption > #txt7,
+#slide8:checked ~ .text-buttons > .caption > #txt8 {
+  visibility: visible;
+  height: auto;
+  opacity: 1;
+}
+
+.buttons {
+  display: flex;
+  background-color: #212121;
+}
+
+.button {
+  width: 1rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button > span {
+  display: block;
+  width: 0.4rem;
+  height: 0.4rem;
+  border: solid 0.1rem #2D9CDB;
+  background-color: #2D9CDB;
+  border-radius: 50%;
+  transition: .2s;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+#slide1:checked ~ .slider {
+  transform: translateX(0);
+}
+
+#slide2:checked ~ .slider {
+  transform: translateX(calc(-12.5% * 1 - 1rem / 7));
+}
+
+#slide3:checked ~ .slider {
+  transform: translateX(calc(-12.5% * 2 - 2rem / 7));
+}
+
+#slide4:checked ~ .slider {
+  transform: translateX(calc(-12.5% * 3 - 3rem / 7));
+}
+
+#slide5:checked ~ .slider {
+  transform: translateX(calc(-12.5% * 4 - 4rem / 7));
+}
+
+#slide6:checked ~ .slider {
+  transform: translateX(calc(-12.5% * 5 - 5rem / 7));
+}
+
+#slide7:checked ~ .slider {
+  transform: translateX(calc(-12.5% * 6 - 6rem / 7));
+}
+
+#slide8:checked ~ .slider {
+  transform: translateX(calc(-12.5% * 7 - 7rem / 7));
+}
+
+#slide1:checked ~ .text-buttons > .buttons > #btn1 > span,
+#slide2:checked ~ .text-buttons > .buttons > #btn2 > span,
+#slide3:checked ~ .text-buttons > .buttons > #btn3 > span,
+#slide4:checked ~ .text-buttons > .buttons > #btn4 > span, 
+#slide5:checked ~ .text-buttons > .buttons > #btn5 > span, 
+#slide6:checked ~ .text-buttons > .buttons > #btn6 > span, 
+#slide7:checked ~ .text-buttons > .buttons > #btn7 > span,
+#slide8:checked ~ .text-buttons > .buttons > #btn8 > span {
+  border: solid 0.1rem #2D9CDB;
+  background-color: transparent;
+}
+
+#slide1:checked ~ .text-buttons > .buttons > #btn1:hover > span,
+#slide2:checked ~ .text-buttons > .buttons > #btn2:hover > span,
+#slide3:checked ~ .text-buttons > .buttons > #btn3:hover > span,
+#slide4:checked ~ .text-buttons > .buttons > #btn4:hover > span, 
+#slide5:checked ~ .text-buttons > .buttons > #btn5:hover > span, 
+#slide6:checked ~ .text-buttons > .buttons > #btn6:hover > span, 
+#slide7:checked ~ .text-buttons > .buttons > #btn7:hover > span,
+#slide8:checked ~ .text-buttons > .buttons > #btn8:hover > span {
+  border: solid 0.1rem #FFF;
+}
+
+#slide1:checked ~ .text-buttons > .buttons > #btn1:active > span,
+#slide2:checked ~ .text-buttons > .buttons > #btn2:active > span,
+#slide3:checked ~ .text-buttons > .buttons > #btn3:active > span,
+#slide4:checked ~ .text-buttons > .buttons > #btn4:active > span, 
+#slide5:checked ~ .text-buttons > .buttons > #btn5:active > span, 
+#slide6:checked ~ .text-buttons > .buttons > #btn6:active > span, 
+#slide7:checked ~ .text-buttons > .buttons > #btn7:active > span,
+#slide8:checked ~ .text-buttons > .buttons > #btn8:active > span {
+  border: solid 0.1rem #AAA;
+}
+
+.button:hover > span {
+  border: solid 0.1rem #FFF;
+  background-color: #FFF;
+}
+
+.button:active > span {
+  border: solid 0.1rem #AAA;
+  background-color: #AAA;
+}
+
+.footer {
+  margin: 2rem auto 0;
+  font-size: 0.7rem;
+  line-height: 130%;
+  text-align: center;
+  color: #555;
+}
+
+@media screen and (max-width: 500px) {
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  .figcaption {
+    font-size: 0.8rem;
+    line-height: 140%;
+  }
+
+  .text-buttons {
+    margin-top: 0.5rem;
+    flex-direction: column;
+    gap: 2%;
+  }
+
+  .buttons {
+    order: -1;
+    align-self: center;
+  }
+
+  .button {
+    height: 1.2rem;
+    width: 1.2rem;
+  }
+}
